@@ -34,26 +34,56 @@
 })(jQuery);
 
 
-{/* // Get the modal */}
+// {/* // Get the modal */}
 var modal = document.getElementById("myModal");
 
-{/* // Get the image and insert it inside the modal - use its "alt" text as a caption */}
-var img = document.getElementById("myImg");
+// {/* // Get the image and insert it inside the modal - use its "alt" text as a caption */}
+// var img = document.getElementById("myImg");
+// var img = document.getElementsByClassName("imgPortfolio");
 var navBar = document.getElementById("nav");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
-  navBar.style.display= "none";
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+var numImagesForWorks = {
+	"Market_Design_Varsova": 3,
+	"Business_Park": 6,
+	"Market_Design_Kamothe": 3,
+	"Gated_Community": 3,
+	"Landscape_Design": 1,
+	"Interior_Design": 2,
+	"Furniture_Design": 1,
+	"Municipal_Drawings": 4,
+	"Other_Works": 3
 }
 
-{/* // Get the <span> element that closes the modal */}
+$(document).ready(function() {
+	$('img.imgPortfolio').click(function(event) {
+		navBar.style.display= "none";
+		modal.style.display = "block";
+		var source = event.target.src;
+		var taskName = event.target.src.split("/images/")[1]
+		taskName = taskName.replace(".jpeg", "")
+		var numImages = numImagesForWorks[taskName]
+
+		let i;
+		for (i = 1; i <= numImages; i++) {
+			var new_element = document.createElement("img");
+			new_element.className = "modal-content";
+			new_element.src = source.replace(".jpeg", `${i}.jpeg`);
+			new_element.style.paddingBottom = "30px";
+			modal.appendChild(new_element);
+		}
+
+		  captionText.innerHTML = taskName.replaceAll("_", " ");
+		  captionText.style.fontSize = "xx-large";
+	});
+});
+
+// {/* // Get the <span> element that closes the modal */}
 var span = document.getElementsByClassName("close")[0];
 
-{/* // When the user clicks on <span> (x), close the modal */}
+// {/* // When the user clicks on <span> (x), close the modal */}
 span.onclick = function() { 
   navBar.style.display= "block";
   modal.style.display = "none";
+  $('.modal-content').remove();
 }
