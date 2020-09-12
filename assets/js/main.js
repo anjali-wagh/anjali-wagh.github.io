@@ -55,6 +55,7 @@ var numImagesForWorks = {
 	"Other_Works": 3
 }
 
+
 $(document).ready(function() {
 	$('img.imgPortfolio').click(function(event) {
 		navBar.style.display= "none";

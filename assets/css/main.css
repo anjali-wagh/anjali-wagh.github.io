@@ -35,7 +35,12 @@ body {
 
 .checked {
 	color: orange;
-  }
+}
+
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+}
 
 ol, ul {
 	list-style: none;
