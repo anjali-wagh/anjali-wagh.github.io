@@ -1642,6 +1642,12 @@ input, select, textarea {
 			border-radius: 50%; */
 		}
 
+		.box.style1 img {
+			display: block;
+			width: 100%;
+			margin: 0 0 2em 0;
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -1923,7 +1929,7 @@ input, select, textarea {
 	}
 
 		.box.style1 {
-			padding: 3em 2em 3.5em 2em;
+			padding: 2em 2em 3.5em 2em;
 		}
 
 			.box.style1 h3 {
@@ -1994,7 +2000,7 @@ input, select, textarea {
 	.wrapper {
 		background-image: url("images/bg.png");
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-		padding: 8em 0 8em 0;
+		padding: 2em 0 2em 0;
 		text-align: center;
 	}
 
