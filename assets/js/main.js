@@ -75,6 +75,7 @@ $(document).ready(function() {
 
 		  captionText.innerHTML = taskName.replaceAll("_", " ");
 		  captionText.style.fontSize = "xx-large";
+		  captionText.style.paddingBottom = "10px";
 	});
 });
 
