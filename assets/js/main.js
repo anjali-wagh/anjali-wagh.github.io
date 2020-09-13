@@ -76,6 +76,7 @@ $(document).ready(function() {
 
 		  captionText.innerHTML = taskName.replaceAll("_", " ");
 		  captionText.style.fontSize = "xx-large";
+		  document.querySelector("body").style.overflow = 'hidden';
 		//   captionText.style.paddingBottom = "100px";
 	});
 });
@@ -88,4 +89,5 @@ span.onclick = function() {
   navBar.style.display= "block";
   modal.style.display = "none";
   $('.modal-content').remove();
+  document.querySelector("body").style.overflow = 'visible';
 }

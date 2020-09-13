@@ -37,10 +37,10 @@ body {
 	color: orange;
 }
 
-body.modal-open {
+/* body.modal-open {
     overflow: hidden;
     position: fixed;
-}
+} */
 
 ol, ul {
 	list-style: none;
